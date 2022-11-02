@@ -6,22 +6,28 @@
 #define WINH 720
 #define WINNAME "Hah game"
 
-int main() {
+void DrawStuff();
+
+int main(void) {
   InitWindow(WINW, WINH, WINNAME);
 
   SetExitKey(0);
 
   while (!WindowShouldClose()) {
-    BeginDrawing();
-
-    ClearBackground(WHITE);
-
-    DrawText("lol", 10, 10, 100, BLUE);
-
-    EndDrawing();
+    DrawStuff();
   }
 
   CloseWindow();
 
   return 0;
+}
+
+void DrawStuff() {
+  BeginDrawing();
+
+  ClearBackground(BLACK);
+
+  DrawText("Hello World!", 0, 0, 50, WHITE);
+
+  EndDrawing();
 }

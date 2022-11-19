@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(my_raylib_game C)
+project(Randomgam)
 
 find_package(raylib QUIET)
 if (NOT raylib_FOUND)

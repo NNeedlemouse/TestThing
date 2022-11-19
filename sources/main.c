@@ -1,33 +1,23 @@
-#include "stdio.h"
-#include "stdlib.h"
 #include <raylib.h>
 
-#define WINW 1280
-#define WINH 720
-#define WINNAME "Hah game"
+#define WIN 1280, 720, "Hi"
 
-void DrawStuff();
+int main(){
 
-int main(void) {
-  InitWindow(WINW, WINH, WINNAME);
+    InitWindow(WIN);
 
-  SetExitKey(0);
+    while (!WindowShouldClose()) {
+        BeginDrawing();
 
-  while (!WindowShouldClose()) {
-    DrawStuff();
-  }
+        ClearBackground(WHITE);
 
-  CloseWindow();
+        DrawText("lol", 0, 0, 100, BLACK);
 
-  return 0;
-}
+        EndDrawing();
+    }
 
-void DrawStuff() {
-  BeginDrawing();
+    CloseWindow();
 
-  ClearBackground(BLACK);
+    return 0;
 
-  DrawText("Hello World!", 0, 0, 50, WHITE);
-
-  EndDrawing();
 }
